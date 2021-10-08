@@ -2,11 +2,13 @@
 
 function Character (props) {
 
-    const { characters } = props
+    const { character } = props
+
+    console.log(character)
 
     return (
         <div>
-            <h3>Characters Name = {characters.name}</h3>
+            <h3>{character}</h3>
         </div>
     )
 }
