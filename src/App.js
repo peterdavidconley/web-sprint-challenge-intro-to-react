@@ -43,7 +43,7 @@ const App = () => {
     <StyledApp>
       <h1>Star Wars Characters</h1>
       <StyledCharacters>
-        {sWCharacters.map( character => <Character key={character.birth_year} character={character.name} url={character.url}/>)}
+        {sWCharacters.map( character => <Character key={character.name} character={character.name} url={character.url} films={character.films}/>)}
       </StyledCharacters>
     </StyledApp>
   );
