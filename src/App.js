@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import axios from 'axios'
+import Character from './components/Character'
 
 const App = () => {
+
+  const [ sWCharacters, setSWCharacters ] = useState([])
+
+  useEffect(() => {
+    axios.get(`https://swapi.dev/api/people`)
+    .then( res => {
+      setSWCharacters(res.data)
+    })
+    .catch( err => {
+      console.error(err)
+    })
+  },[])
+
+  console.log(sWCharacters)
+
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
