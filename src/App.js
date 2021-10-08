@@ -7,7 +7,7 @@ import styled from 'styled-components'
 const StyledApp = styled.div`
 
 h1 {
-  color: #46b903;
+  color: purple;
   text-align: center;
   text-shadow: 1px 1px 5px #fff;
   font-size: 3rem; }
@@ -43,7 +43,7 @@ const App = () => {
     <StyledApp>
       <h1>Star Wars Characters</h1>
       <StyledCharacters>
-        {sWCharacters.map( character => <Character key={character.birth_year} character={character.name}/>)}
+        {sWCharacters.map( character => <Character key={character.birth_year} character={character.name} url={character.url}/>)}
       </StyledCharacters>
     </StyledApp>
   );
