@@ -2,9 +2,11 @@
 
 function Character (props) {
 
+    const { characters } = props
+
     return (
         <div>
-            <h3>Star Wars Character here</h3>
+            <h3>Characters Name = {characters.name}</h3>
         </div>
     )
 }
