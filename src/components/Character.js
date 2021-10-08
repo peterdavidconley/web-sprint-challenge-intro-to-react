@@ -1,5 +1,15 @@
 // Write your Character component here
 
+import styled from 'styled-components'
+
+const StyledCharacter = styled.div`
+
+    margin: 2%;
+    padding: 2%;
+    border: purple 2px solid;
+
+`
+
 function Character (props) {
 
     const { character } = props
@@ -7,9 +17,9 @@ function Character (props) {
     console.log(character)
 
     return (
-        <div>
+        <StyledCharacter>
             <h3>{character}</h3>
-        </div>
+        </StyledCharacter>
     )
 }
 
